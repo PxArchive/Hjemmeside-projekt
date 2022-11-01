@@ -35,14 +35,12 @@ p.vertical{
 	font-weight: 700;
 	font-style: italic;
 	font-size: 48pt;
-	display: block;
 	color: var(--color-3);
 }
 
 hr.vertical{
 	/* Lines */
 	border: 1px mediumblack;
-	display: block;
 	transform: rotate(-90deg);
 }
 
@@ -52,7 +50,6 @@ hr.vertical{
 	font-style: italic;
 	font-size: 32pt;
 	color: var(--color-1);
-	display: flex;
 	text-decoration: none;
 	
 	/*
@@ -77,6 +74,7 @@ hr.vertical{
 	font-weight: 700;
 	font-style: normal;
 	font-size: 16pt;
+	width: 150px;
 }
 
 .button:hover{
@@ -108,8 +106,10 @@ p {
 #top-bar {
 	background-color: var(--color-4);
 	display: flex;
-	justify-content:center;
-	flex-flow: row nowrap;
+	color: var(--color-1);
+	justify-content: flex-start;
+	padding: 16px;
+	margin: 0px;
 	
 	/*
 	grid-template-columns: 30% 20% 40%;
@@ -118,13 +118,10 @@ p {
 }
 
 #nav-bar {
-	display: grid;
-	grid-template-columns: 30% 20% 40%;
-	grid-template-rows: 100%;
-	justify-content: space-around;
+	display: flex;
+	justify-content: space-evenly;
 	align-items: center;
-	flex-wrap: nowrap;
-	width: 500px;
+	padding: 16px
 }
 
 #nav-bar a {
@@ -134,6 +131,7 @@ p {
 	font-weight: 700;
 	font-style: normal;
 	font-size: 32pt;
+	
 }
 
 #nav-bar a:hover{
@@ -146,4 +144,26 @@ p {
 
 img {
 	border-radius: 12.5%;
+}
+
+.profile {
+	display: grid;
+	grid-template-rows: 200px 50%;
+	grid-template-columns: 10% 10% 10% 70%;
+	flex-direction: row;
+	justify-content:space-evenly;
+	align-items:flex-start;
+}
+
+.profile *{
+	grid-column: 4 / 4;
+}
+
+.profile .vertical {
+	grid-column: 2 / 2;
+}
+
+hr.profile{
+	/* fix line alignment */
+	grid-column: 3 / 3;
 }
