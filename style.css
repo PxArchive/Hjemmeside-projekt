@@ -48,6 +48,7 @@ div.content{
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	padding-right: 3%;
 }
 
 div.horizontal{
@@ -104,27 +105,27 @@ div.horizontal{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
-	font-family: "Atkinson Hyperlegible" , "sans-serif";
-	font-weight: 700;
-	font-style: normal;
-	font-size: 16pt;
-	margin: 0px;
+	padding-right: 3%;
 	/*
 	width: 150px;
 	height: 25px;*/
 }
 
 .button a{
-	
-	border: none;
-	border-radius: 20%;
-	overflow: hidden;
-    perspective: 1px;
-	border-collapse: separate;
-	width: 150px;
-	height: 25px;
+	font-family: "Atkinson Hyperlegible" , "sans-serif";
+	font-weight: 700;
+	font-style: normal;
+	font-size: 16pt;
+	text-decoration: none;
 	color: var(--color-1);
+	flex-direction: row;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+	width: 200px;
+	height: 40px;
+	
 	background-color: var(--color-2);
 }
 
