@@ -12,6 +12,65 @@
 
 /* TODO: Maybe use h1, h2, etc. for titles instead of the classes I made? */
 
+#top-bar {
+	background-color: var(--color-4);
+	display: flex;
+	color: var(--color-1);
+	justify-content: flex-start;
+	padding: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 0px;
+	border-radius: 20px;
+}
+
+.logo-button{
+	font-family: "Atkinson Hyperlegible" , "sans-serif";
+	font-weight: 700;
+	font-style: italic;
+	font-size: 28pt;
+	color: var(--color-1);
+	text-decoration: none;
+}
+
+.logo-button:hover{
+	color: var(--color-2);
+}
+
+#nav-bar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0px;
+	margin: 30px;
+}
+
+#nav-bar a {
+	color: var(--color-2);
+	text-decoration: none;
+	font-family: "Atkinson Hyperlegible" , "sans-serif";
+	font-weight: 700;
+	font-style: normal;
+	font-size: 24pt;
+	padding-left: 60px;
+	padding-right: 60px;
+}
+
+#nav-bar a:hover{
+	color: var(--color-4);
+}
+
+div.content{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding-right: 3%;
+}
+
+img {
+	border-radius: 12.5%;
+}
+
 .title1{
 	font-family: "Verdana" , "sans-serif";
 	font-weight: 700;
@@ -47,19 +106,6 @@ p a:hover {
 	color: var(--color-3);
 }
 
-div.bottom{
-	display: flex;
-	flex-direction: row;
-	align-content:center;
-}
-
-div.content{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	padding-right: 3%;
-}
-
 div.horizontal{
 	display: flex;
 	flex-direction: column;
@@ -67,7 +113,6 @@ div.horizontal{
 }
 
 .vertical{
-	
 	display: flex;
 	flex-direction: row;
 	align-items: flex-end;
@@ -92,17 +137,11 @@ div.horizontal{
 	height: 100%;
 }
 
-.logo-button{
-	font-family: "Atkinson Hyperlegible" , "sans-serif";
-	font-weight: 700;
-	font-style: italic;
-	font-size: 28pt;
-	color: var(--color-1);
-	text-decoration: none;
-}
 
-.logo-button:hover{
-	color: var(--color-2);
+div.bottom{
+	display: flex;
+	flex-direction: row;
+	align-content:center;
 }
 
 .button {
@@ -134,38 +173,17 @@ div.horizontal{
 	background-color: var(--color-4);
 }
 
-#top-bar {
-	background-color: var(--color-4);
-	display: flex;
-	color: var(--color-1);
-	justify-content: flex-start;
-	padding: 1.5%;
-	margin: 0px;
-}
-
-#nav-bar {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 0px;
-	margin: 30px;
-}
-
-#nav-bar a {
-	color: var(--color-2);
-	text-decoration: none;
-	font-family: "Atkinson Hyperlegible" , "sans-serif";
-	font-weight: 700;
-	font-style: normal;
-	font-size: 24pt;
-	padding-left: 60px;
-	padding-right: 60px;
-}
-
-#nav-bar a:hover{
-	color: var(--color-4);
-}
-
-img {
-	border-radius: 12.5%;
+@media screen and (max-width: 1024px){
+	p { font-size: 10pt; }
+	.title1 { font-size: 16pt; }
+	/* NOTE: Font changes not working on vertical text for some reason... */
+	.vertical-text { font-weight: 400; font size: 10pt; color: red; }
+	/*TODO: Test sizes: (mainly mobile)
+	
+	320px: mobile portrait
+	480px: mobile landscape
+	768px: tablet portait
+	1024px: tablet landscape
+	1280px: Desktop/laptop
+	*/
 }
