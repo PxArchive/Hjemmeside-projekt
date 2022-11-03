@@ -12,16 +12,21 @@
 
 /* TODO: Maybe use h1, h2, etc. for titles instead of the classes I made? */
 
+body {
+	margin: 0;
+	padding: 0;
+}
+
 #top-bar {
 	background-color: var(--color-4);
 	display: flex;
 	color: var(--color-1);
 	justify-content: flex-start;
-	padding: 20px;
+	padding: 32px;
 	padding-left: 20px;
 	padding-right: 20px;
 	margin: 0px;
-	border-radius: 20px;
+	/*border-radius: 20px;*/
 }
 
 .logo-button{
@@ -35,6 +40,20 @@
 
 .logo-button:hover{
 	color: var(--color-2);
+}
+
+#top-mobile{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+svg {
+	fill: var(--color-1);
+}
+
+svg:hover{
+	fill: var(--color-2);
 }
 
 #nav-bar {
@@ -68,6 +87,8 @@ div.content{
 }
 
 img {
+	width: 350px;
+	height: 350px;
 	border-radius: 12.5%;
 }
 
@@ -100,6 +121,7 @@ p {
 p a {
 	color: var(--color-2);
 	text-decoration: none;
+	font-weight: 700;
 }
 
 p a:hover {
@@ -173,11 +195,15 @@ div.bottom{
 	background-color: var(--color-4);
 }
 
-@media screen and (max-width: 1024px){
-	p { font-size: 10pt; }
-	.title1 { font-size: 16pt; }
+@media (max-width: 1024px) /*and (orientation: portrait)*/{
+	p { font-size: 1.25em; }
+	.title1 { font-size: 1.5em; }
 	/* NOTE: Font changes not working on vertical text for some reason... */
-	.vertical-text { font-weight: 400; font size: 10pt; color: red; }
+	.vertical-text { font-weight: 700; font-size: 3em; }
+	#top-web {display: none;}
+	#nav-bar {display: none;}
+	#top-bar {margin-bottom: 3em;}
+	.button a {width: 250px; height: 60px; font-size: 2em; margin-top: 40px;}
 	/*TODO: Test sizes: (mainly mobile)
 	
 	320px: mobile portrait
@@ -186,4 +212,8 @@ div.bottom{
 	1024px: tablet landscape
 	1280px: Desktop/laptop
 	*/
+}
+
+@media (min-width: 1024px){
+	#top-mobile {display: none}
 }
