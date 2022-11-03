@@ -3,8 +3,8 @@
 
 :root {
 	--color-1: #FFFFFF;
-	--color-2: /*#E0880B; #E06500; */ #FFA601;
-	--color-3: /*#B7A96E; #796F47;  #A39550; #A8906C;*/ #DDCEA8;
+	--color-2: /*#E0880B; */#E06500; /* #FFA601;*/
+	--color-3: /*#B7A96E; #796F47;*/  #A39550;/* #A8906C; #DDCEA8;*/
 	--color-4: #000000;
 	--color-5: #FFFFFF;
 }
@@ -188,10 +188,14 @@ div.bottom{
 	justify-content: center;
 	align-items: center;
 	border-radius: 20px;
+width: 250px; height: 60px; font-size: 2em; margin-top: 40px;
+/*
 	width: 200px;
 	height: 40px;
+margin-top: 40px;
+*/
 	background-color: var(--color-2);
-	margin-top: 40px;
+	
 }
 
 .button a:hover{
@@ -206,7 +210,7 @@ div.bottom{
 	#top-web {display: none;}
 	#nav-bar {display: none;}
 	#top-bar {margin-bottom: 3em;}
-	.button a {width: 250px; height: 60px; font-size: 2em; margin-top: 40px;}
+	/*.button a {width: 250px; height: 60px; font-size: 2em; margin-top: 40px;}*/
 	/*TODO: Test sizes: (mainly mobile)
 	
 	320px: mobile portrait
@@ -217,6 +221,6 @@ div.bottom{
 	*/
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1025px){
 	#top-mobile {display: none}
 }
