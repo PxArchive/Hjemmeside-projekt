@@ -3,9 +3,10 @@
 
 :root {
 	--color-1: #FFFFFF;
-	--color-2: #E0880B;
-	--color-3: #B7A96E;
+	--color-2: /*#E0880B; #E06500; */ #FFA601;
+	--color-3: /*#B7A96E; #796F47;  #A39550; #A8906C;*/ #DDCEA8;
 	--color-4: #000000;
+	--color-5: #FFFFFF;
 }
 
 /* 400 = regular, 700 = bold */
@@ -15,6 +16,7 @@
 body {
 	margin: 0;
 	padding: 0;
+	background-color: var(--color-1);
 }
 
 #top-bar {
@@ -34,7 +36,7 @@ body {
 	font-weight: 700;
 	font-style: italic;
 	font-size: 28pt;
-	color: var(--color-1);
+	color: var(--color-5);
 	text-decoration: none;
 }
 
@@ -96,7 +98,7 @@ img {
 	font-family: "Verdana" , "sans-serif";
 	font-weight: 700;
 	font-style: normal;
-	font-size: 18pt;
+	font-size: 20pt;
 	color: var(--color-3);
 	margin: 0%;
 	margin-top: 24px;
@@ -189,6 +191,7 @@ div.bottom{
 	width: 200px;
 	height: 40px;
 	background-color: var(--color-2);
+	margin-top: 40px;
 }
 
 .button a:hover{
